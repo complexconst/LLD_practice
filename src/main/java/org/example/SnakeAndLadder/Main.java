@@ -1,9 +1,8 @@
-package org.example;
+package org.example.SnakeAndLadder;
 
-import org.example.entities.Board;
-import org.example.entities.Player;
+import org.example.SnakeAndLadder.entities.Board;
+import org.example.SnakeAndLadder.entities.Player;
 
-import java.util.HashMap;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args)

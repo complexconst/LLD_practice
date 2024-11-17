@@ -1,4 +1,4 @@
-package org.example.entities;
+package org.example.SnakeAndLadder.entities;
 
 import java.util.Random;
 

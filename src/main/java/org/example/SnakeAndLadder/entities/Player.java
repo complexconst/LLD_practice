@@ -1,4 +1,4 @@
-package org.example.entities;
+package org.example.SnakeAndLadder.entities;
 
 public class Player {
     private static int id;
