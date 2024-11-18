@@ -1,4 +1,4 @@
-package Splitwise.entities;
+package ParkingLot.entities;
 
 public enum vehicleType {
     CAR,

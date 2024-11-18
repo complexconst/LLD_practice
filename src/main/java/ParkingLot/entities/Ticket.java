@@ -1,9 +1,9 @@
-package Splitwise.entities;
+package ParkingLot.entities;
 
 public class Ticket {
     Integer floorNumber;
     String regNo;
-    Splitwise.entities.vehicleType vehicleType;
+    ParkingLot.entities.vehicleType vehicleType;
     String vehicleColor;
 
     public Ticket(Integer floorNumber, String regNo, vehicleType vehicleType, String vehicleColor) {
@@ -21,7 +21,7 @@ public class Ticket {
         return regNo;
     }
 
-    public Splitwise.entities.vehicleType getVehicleType() {
+    public ParkingLot.entities.vehicleType getVehicleType() {
         return vehicleType;
     }
     public String getVehicleColor() {

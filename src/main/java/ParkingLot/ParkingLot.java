@@ -1,7 +1,7 @@
-package Splitwise;
+package ParkingLot;
 
-import Splitwise.entities.Ticket;
-import Splitwise.entities.vehicleType;
+import ParkingLot.entities.Ticket;
+import ParkingLot.entities.vehicleType;
 
 import java.util.TreeMap;
 

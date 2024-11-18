@@ -1,6 +1,6 @@
-package Splitwise;
+package ParkingLot;
 
-import Splitwise.entities.vehicleType;
+import ParkingLot.entities.vehicleType;
 
 public class Main {
     public static void main(String[] args) {
