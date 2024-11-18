@@ -1,7 +1,7 @@
-package org.example.SnakeAndLadder;
+package SnakeAndLadder;
 
-import org.example.SnakeAndLadder.entities.Board;
-import org.example.SnakeAndLadder.entities.Player;
+import SnakeAndLadder.entities.Board;
+import SnakeAndLadder.entities.Player;
 
 import java.util.Scanner;
 public class Main {
