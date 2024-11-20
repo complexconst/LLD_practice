@@ -10,12 +10,18 @@ public class TicketRepository implements ITicketRepository {
     TreeMap<Integer, Ticket> tickets;
     static int ticketId;
 
+    public TicketRepository() {
+        tickets = new TreeMap<>();
+        ticketId = 1;
+    }
+
     public Integer generateTicket(String regNo, Integer floorNum, vehicleType type, String color) {
         try {
             tickets.put(ticketId++, new Ticket(floorNum, regNo, type, color));
         return ticketId - 1;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
     }
 

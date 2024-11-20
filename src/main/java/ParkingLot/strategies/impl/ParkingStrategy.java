@@ -4,6 +4,8 @@ import ParkingLot.entities.Ticket;
 import ParkingLot.entities.vehicleType;
 import ParkingLot.repository.ISlotRepository;
 import ParkingLot.repository.ITicketRepository;
+import ParkingLot.repository.SlotRepository;
+import ParkingLot.repository.TicketRepository;
 import ParkingLot.strategies.IParkingStrategy;
 
 public class ParkingStrategy implements IParkingStrategy {
@@ -11,9 +13,9 @@ public class ParkingStrategy implements IParkingStrategy {
     ISlotRepository slotRepository;
     ITicketRepository ticketRepository;
 
-    ParkingStrategy(ISlotRepository slotRepository, ITicketRepository ticketRepository) {
+    public ParkingStrategy(ISlotRepository slotRepository) {
         this.slotRepository = slotRepository;
-        this.ticketRepository = ticketRepository;
+        this.ticketRepository = new TicketRepository();
     }
 
     public Integer ParkVehicle(Integer floorNum, vehicleType type, String regNo, String color) {

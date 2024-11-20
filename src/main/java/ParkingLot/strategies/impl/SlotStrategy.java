@@ -2,8 +2,10 @@ package ParkingLot.strategies.impl;
 
 import ParkingLot.entities.vehicleType;
 import ParkingLot.repository.ISlotRepository;
+import ParkingLot.repository.SlotRepository;
+import ParkingLot.strategies.ISlotStrategy;
 
-public class SlotStrategy {
+public class SlotStrategy implements ISlotStrategy {
 
     ISlotRepository slotRepository;
 
@@ -12,7 +14,7 @@ public class SlotStrategy {
     }
 
 
-    void AddSlots(Integer floorNum, Integer slotsPerFloor) {
+    public void addSlots(Integer floorNum, Integer slotsPerFloor) {
         for(Integer floor = 1; floor <= floorNum; floor++) {
             for(Integer slotNum = 1; slotNum <= slotsPerFloor; slotNum++) {
                 vehicleType type = null;
@@ -26,7 +28,7 @@ public class SlotStrategy {
                     type = vehicleType.CAR;
                 }
 
-                slotRepository.AddSlot(floorNum, type);
+                slotRepository.addSlot(floor, type);
             }
         }
     }
