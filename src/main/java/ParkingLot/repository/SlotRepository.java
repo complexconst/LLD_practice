@@ -12,7 +12,7 @@ public class SlotRepository implements ISlotRepository {
         freeSlots = new TreeMap<>();
     }
 
-
+    @Override
     public void addSlot(Integer floorNum, vehicleType vehicleType) {
         TreeMap<vehicleType, Integer> slots = freeSlots.get(floorNum);
         if(slots == null) {
@@ -22,6 +22,7 @@ public class SlotRepository implements ISlotRepository {
         this.freeSlots.put(floorNum, slots);
     }
 
+    @Override
     public void removeSlot(Integer floorNum, vehicleType vehicleType) {
         TreeMap<vehicleType, Integer> slots = freeSlots.get(floorNum);
         Integer curSlots = slots.get(vehicleType);
@@ -32,6 +33,7 @@ public class SlotRepository implements ISlotRepository {
         }
     }
 
+    @Override
     public Integer slotsOnFloor(Integer floorNum, vehicleType vehicleType) {
         TreeMap<vehicleType, Integer> slots = freeSlots.get(floorNum);
         if(slots != null && slots.containsKey(vehicleType)) {

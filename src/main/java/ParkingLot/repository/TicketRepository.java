@@ -14,7 +14,7 @@ public class TicketRepository implements ITicketRepository {
         tickets = new TreeMap<>();
         ticketId = 1;
     }
-
+    @Override
     public Integer generateTicket(String regNo, Integer floorNum, vehicleType type, String color) {
         try {
             tickets.put(ticketId++, new Ticket(floorNum, regNo, type, color));

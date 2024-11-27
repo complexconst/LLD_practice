@@ -4,6 +4,7 @@ import SnakeAndLadder.entities.Board;
 import SnakeAndLadder.entities.Player;
 
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args)
     {
