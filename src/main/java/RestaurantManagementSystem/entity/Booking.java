@@ -20,6 +20,17 @@ public class Booking {
         this.endTime = endTime;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Booking ID: " + bookingId + "\n");
+        sb.append("Table ID: " + tableId + "\n");
+        sb.append("Customer ID: " + customerId + "\n");
+        sb.append("Start Time: " + startTime + "\n");
+        sb.append("End Time: " + endTime + "\n");
+        return sb.toString();
+    }
+
     public int getBookingId() {
         return bookingId;
     }

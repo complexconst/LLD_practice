@@ -22,4 +22,8 @@ public class BookingRepository {
         bookings.remove(bookingId);
     }
 
+    public void showAllBookings() {
+        System.out.println(bookings);
+    }
+
 }

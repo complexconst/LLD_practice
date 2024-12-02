@@ -1,6 +1,7 @@
 package RestaurantManagementSystem.services;
 
 import RestaurantManagementSystem.entity.Booking;
+import RestaurantManagementSystem.enums.PaymentType;
 import RestaurantManagementSystem.enums.Status;
 import RestaurantManagementSystem.enums.TableType;
 import RestaurantManagementSystem.repository.BookingRepository;
@@ -10,16 +11,18 @@ import java.time.LocalDateTime;
 public class BookingService {
 
     BookingRepository bookingRepository;
+    PaymentFactory paymentFactory;
     TableService tableService;
-    PaymentService paymentService;
     static int globBookingId;
 
 
-    public BookingService() {
+    public BookingService(PaymentFactory paymentFactory, TableService tableService, BookingRepository bookingRepository) {
         this.bookingRepository = new BookingRepository();
+        this.paymentFactory = paymentFactory;
+        this.tableService = tableService;
     }
 
-    public Integer makeBooking(Integer customerId, TableType tableType, LocalDateTime startTime, LocalDateTime endTime) {
+    public Integer makeBooking(PaymentType paymentType, Integer customerId, TableType tableType, LocalDateTime startTime, LocalDateTime endTime) {
 
         var availableTables = tableService.getTableWithTypeAndStatus(tableType, Status.AVAILABLE);
 
@@ -34,7 +37,9 @@ public class BookingService {
 
             var booking = new Booking(globBookingId, tableId, customerId, startTime, endTime);
 
-            // payment code Pending
+            var paymentService = paymentFactory.getPaymentService(paymentType);
+
+            paymentService.acceptPayment();
 
             tableService.bookTable(tableId);
             bookingRepository.addBooking(globBookingId, booking);
@@ -44,6 +49,11 @@ public class BookingService {
 
     public void cancelBooking(Integer bookingId) {
         bookingRepository.removeBooking(bookingId);
+    }
+
+
+    public void showAllBookings() {
+        bookingRepository.showAllBookings();
     }
 
 }

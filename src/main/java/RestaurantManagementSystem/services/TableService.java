@@ -1,5 +1,6 @@
 package RestaurantManagementSystem.services;
 
+import RestaurantManagementSystem.entity.Table;
 import RestaurantManagementSystem.enums.Status;
 import RestaurantManagementSystem.enums.TableType;
 import RestaurantManagementSystem.repository.TableRepository;
@@ -11,13 +12,18 @@ public class TableService {
     private TableRepository tableRepository;
 
 
-    public TableService() {
-        this.tableRepository = new TableRepository();
+    public TableService(TableRepository tableRepository) {
+        this.tableRepository = tableRepository;
     }
 
 
     void bookTable(Integer tableId) {
         tableRepository.modifyStatus(tableId, Status.BOOKED);
+    }
+
+    public void addTable(Integer tableId) {
+        Table table = new Table(tableId, TableType.MEDIUM, Status.AVAILABLE);
+        tableRepository.addTable(tableId, table);
     }
 
 

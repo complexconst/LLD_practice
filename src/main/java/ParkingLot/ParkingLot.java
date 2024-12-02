@@ -11,7 +11,9 @@ public class ParkingLot {
     ISlotStrategy slotStrategy;
     private int noOfFloors;
     private int slotsPerFloor;
-    ParkingLot(int noOfFloors, int slotsPerFloor, IParkingStrategy parkingStrategy, ISlotStrategy slotStrategy) {
+
+
+    public ParkingLot(int noOfFloors, int slotsPerFloor, IParkingStrategy parkingStrategy, ISlotStrategy slotStrategy) {
         this.noOfFloors = noOfFloors;
         this.parkingStrategy = parkingStrategy;
         this.slotStrategy = slotStrategy;
