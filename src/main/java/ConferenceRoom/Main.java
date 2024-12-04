@@ -20,7 +20,9 @@ public class Main {
         conferenceRoomm.addRoom("t-3", "1", "104");
 
         Integer b1 = conferenceRoomm.makeBooking("t-1", "2", "1:3", "102");
-        conferenceRoomm.makeBooking("t-1", "2", "2:3", "103");
+        Integer b2 = conferenceRoomm.makeBooking("t-1", "2", "2:3", "103");
+        conferenceRoomm.getBooking(b1);
+        conferenceRoomm.getBooking(b2);
         conferenceRoomm.searchRooms("t-1", "2", "1:2");
         conferenceRoomm.cancelBooking(b1);
         conferenceRoomm.searchRooms("t-1", "2", "1:2");

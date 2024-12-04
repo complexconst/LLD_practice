@@ -16,6 +16,8 @@ public class BookingService {
         this.bookingsDao = bookingsDao;
     }
 
+
+
     public Integer addBooking(String building, String floor, String slot, String room) {
         try {
             adminService.checkIfExists(building, floor, slot, room);
@@ -23,19 +25,15 @@ public class BookingService {
             for(Integer i = 0; i <= Integer.parseInt(slots[1]); i++) {
                 for(Integer j = Integer.parseInt(slots[1]); j <= 24; j++) {
                     if(i == j) continue;
-                    StringBuilder sb = new StringBuilder(i.toString());
-                    sb.append(":");
-                    sb.append(j);
-                    adminService.deleteRoom(building, floor, sb.toString(), room);
+                    var reqSlot = adminService.returnSlotFromIntegers(i, j);
+                    adminService.deleteRoom(building, floor, reqSlot, room);
                 }
             }
             for(Integer i = Integer.parseInt(slots[0]); i <= Integer.parseInt(slots[1]); i++) {
                 for(Integer j = i + 1; j <= Integer.parseInt(slots[1]); j++) {
                     if(i == j) continue;
-                    StringBuilder sb = new StringBuilder(i.toString());
-                    sb.append(":");
-                    sb.append(j);
-                    adminService.deleteRoom(building, floor, sb.toString(), room);
+                    var reqSlot = adminService.returnSlotFromIntegers(i, j);
+                    adminService.deleteRoom(building, floor, reqSlot, room);
                 }
             }
             Booking booking = new Booking(globBookingId++, building, floor, slot, room);
@@ -59,19 +57,15 @@ public class BookingService {
             for(Integer i = 0; i <= Integer.parseInt(slots[1]); i++) {
                 for(Integer j = Integer.parseInt(slots[1]); j <= 24; j++) {
                     if(i == j) continue;
-                    StringBuilder sb = new StringBuilder(i.toString());
-                    sb.append(":");
-                    sb.append(j);
-                    adminService.addRoomWithSlot(booking.building(), booking.floor(), sb.toString(), booking.room());
+                    var reqSlot = adminService.returnSlotFromIntegers(i, j);
+                    adminService.addRoomWithSlot(booking.building(), booking.floor(), reqSlot, booking.room());
                 }
             }
             for(Integer i = Integer.parseInt(slots[0]); i <= Integer.parseInt(slots[1]); i++) {
                 for(Integer j = i + 1; j <= Integer.parseInt(slots[1]); j++) {
                     if(i == j) continue;
-                    StringBuilder sb = new StringBuilder(i.toString());
-                    sb.append(":");
-                    sb.append(j);
-                    adminService.addRoomWithSlot(booking.building(), booking.floor(), sb.toString(), booking.room());
+                    var reqSlot = adminService.returnSlotFromIntegers(i, j);
+                    adminService.addRoomWithSlot(booking.building(), booking.floor(), reqSlot, booking.room());
                 }
             }
             bookingsDao.removeBooking(booking.id());

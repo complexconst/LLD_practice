@@ -49,6 +49,13 @@ public class AdminService {
         availableRoomsDao.addBuilding(buildingName);
     }
 
+    String returnSlotFromIntegers(Integer i, Integer j) {
+        StringBuilder sb = new StringBuilder(i.toString());
+        sb.append(":");
+        sb.append(j);
+        return sb.toString();
+    }
+
     public void addFloor(String buildingName, String floor) {
         try {
             checkIfExists(buildingName);

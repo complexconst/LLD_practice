@@ -36,6 +36,9 @@ public class ConferenceRoom {
     public void cancelBooking(Integer bookingId) {
         bookingService.cancelBooking(bookingId);
     }
+    public void getBooking(Integer bookingId) {
+        System.out.println(bookingService.getBooking(bookingId));
+    }
     public void showAllBookings() {
         bookingService.getAllBookings();
     }
