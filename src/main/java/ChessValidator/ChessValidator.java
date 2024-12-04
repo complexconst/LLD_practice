@@ -41,7 +41,6 @@ public class ChessValidator {
             e.printStackTrace();
             return false;
         }
-        System.out.println(startPosition + " " + endPosition);
 
         if(startingPeiceName.charAt(0) == endingPeiceName.charAt(0)) {
             return false;
