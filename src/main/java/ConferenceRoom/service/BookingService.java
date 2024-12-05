@@ -49,10 +49,7 @@ public class BookingService {
         try {
             Booking booking = bookingsDao.getBooking(bookingId);
             adminService.checkIfExists(booking.building(), booking.floor(), booking.slot());
-            var building = booking.building();
-            var floor = booking.floor();
             var slot = booking.slot();
-            var room = booking.room();
             String slots[] = slot.split(":");
             for(Integer i = 0; i <= Integer.parseInt(slots[1]); i++) {
                 for(Integer j = Integer.parseInt(slots[1]); j <= 24; j++) {

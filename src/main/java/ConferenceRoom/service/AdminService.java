@@ -97,7 +97,13 @@ public class AdminService {
     public void searchRooms(String buildingName, String floor, String slot) {
         try {
             checkIfExists(buildingName, floor, slot);
-            System.out.println(availableRoomsDao.getRoom(buildingName, floor, slot));
+            var rooms = availableRoomsDao.getRoom(buildingName, floor, slot);
+            if(rooms != null && !rooms.isEmpty()) {
+                System.out.println(rooms);
+            }
+            else {
+                System.out.println("No rooms found !!!!!!!");
+            }
         }
         catch(Exception e) {
             e.printStackTrace();
