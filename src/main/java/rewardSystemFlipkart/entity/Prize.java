@@ -1,4 +1,4 @@
-package rewardSystemFlipkart.entity;
+package RewardSystemFlipkart.entity;
 
 public class Prize {
     String name;

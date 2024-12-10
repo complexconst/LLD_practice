@@ -1,11 +1,11 @@
-package rewardSystemFlipkart;
+package RewardSystemFlipkart;
 
-import rewardSystemFlipkart.dao.EventDao;
-import rewardSystemFlipkart.dao.Impl.EventDaoImpl;
-import rewardSystemFlipkart.dao.Impl.MemberDaoImpl;
-import rewardSystemFlipkart.dao.MemberDao;
-import rewardSystemFlipkart.services.AdminService;
-import rewardSystemFlipkart.services.EventService;
+import RewardSystemFlipkart.dao.EventDao;
+import RewardSystemFlipkart.dao.Impl.EventDaoImpl;
+import RewardSystemFlipkart.dao.Impl.MemberDaoImpl;
+import RewardSystemFlipkart.dao.MemberDao;
+import RewardSystemFlipkart.services.AdminService;
+import RewardSystemFlipkart.services.EventService;
 
 import java.util.Arrays;
 

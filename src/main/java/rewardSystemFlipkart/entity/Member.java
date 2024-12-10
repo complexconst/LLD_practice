@@ -1,4 +1,4 @@
-package rewardSystemFlipkart.entity;
+package RewardSystemFlipkart.entity;
 
 import java.util.ArrayList;
 import java.util.List;

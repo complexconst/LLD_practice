@@ -1,7 +1,7 @@
-package rewardSystemFlipkart.dao.Impl;
+package RewardSystemFlipkart.dao.Impl;
 
-import rewardSystemFlipkart.dao.MemberDao;
-import rewardSystemFlipkart.entity.Member;
+import RewardSystemFlipkart.dao.MemberDao;
+import RewardSystemFlipkart.entity.Member;
 
 import java.util.HashMap;
 import java.util.Map;

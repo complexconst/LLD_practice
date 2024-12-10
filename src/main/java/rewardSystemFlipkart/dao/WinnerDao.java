@@ -1,4 +1,4 @@
-package rewardSystemFlipkart.dao;
+package RewardSystemFlipkart.dao;
 
 public interface WinnerDao {
 }

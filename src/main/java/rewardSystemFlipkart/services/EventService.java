@@ -1,13 +1,12 @@
-package rewardSystemFlipkart.services;
+package RewardSystemFlipkart.services;
 
-import rewardSystemFlipkart.dao.EventDao;
-import rewardSystemFlipkart.dao.MemberDao;
-import rewardSystemFlipkart.entity.Bid;
+import RewardSystemFlipkart.dao.EventDao;
+import RewardSystemFlipkart.dao.MemberDao;
+import RewardSystemFlipkart.entity.Bid;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class EventService {
 

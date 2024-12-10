@@ -1,6 +1,6 @@
-package rewardSystemFlipkart.dao;
+package RewardSystemFlipkart.dao;
 
-import rewardSystemFlipkart.entity.Event;
+import RewardSystemFlipkart.entity.Event;
 
 import java.util.Map;
 

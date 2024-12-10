@@ -1,6 +1,5 @@
-package rewardSystemFlipkart.entity;
+package RewardSystemFlipkart.entity;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

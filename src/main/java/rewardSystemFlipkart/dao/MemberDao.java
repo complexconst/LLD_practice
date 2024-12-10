@@ -1,6 +1,6 @@
-package rewardSystemFlipkart.dao;
+package RewardSystemFlipkart.dao;
 
-import rewardSystemFlipkart.entity.Member;
+import RewardSystemFlipkart.entity.Member;
 
 public interface MemberDao {
 

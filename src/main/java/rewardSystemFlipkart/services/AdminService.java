@@ -1,12 +1,10 @@
-package rewardSystemFlipkart.services;
+package RewardSystemFlipkart.services;
 
-import rewardSystemFlipkart.dao.EventDao;
-import rewardSystemFlipkart.dao.Impl.EventDaoImpl;
-import rewardSystemFlipkart.dao.Impl.MemberDaoImpl;
-import rewardSystemFlipkart.dao.MemberDao;
-import rewardSystemFlipkart.entity.Event;
-import rewardSystemFlipkart.entity.Member;
-import rewardSystemFlipkart.entity.Prize;
+import RewardSystemFlipkart.dao.EventDao;
+import RewardSystemFlipkart.dao.MemberDao;
+import RewardSystemFlipkart.entity.Event;
+import RewardSystemFlipkart.entity.Member;
+import RewardSystemFlipkart.entity.Prize;
 
 import java.util.ArrayList;
 import java.util.Comparator;

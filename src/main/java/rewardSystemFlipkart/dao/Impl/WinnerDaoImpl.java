@@ -1,4 +1,4 @@
-package rewardSystemFlipkart.dao.Impl;
+package RewardSystemFlipkart.dao.Impl;
 
 public class WinnerDaoImpl {
 
