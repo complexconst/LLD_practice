@@ -87,6 +87,8 @@ public class EventService {
             }
             if(winnerId != null) {
                 var winner = memberDao.getMemberFromDb(winnerId);
+                winner.setSupercoins(winner.getSupercoins() - minBid);
+                memberDao.addMemberInDb(winner);
                 System.out.println(winner.getName() + "wins: " + event.getPrize().getName() + " with lowest bid " + minBid);
             }
             else {
